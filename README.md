@@ -8,3 +8,7 @@ Progress:
 2.Added dependencies for webdrivermanager, testng and selenium-java
 
 3.Added a test class for flipkart login page using selenium methods
+
+4.Moved the setup and clean up methods to a TestBase class
+
+5.Refactored to use POM pattern, created and used HomePage class

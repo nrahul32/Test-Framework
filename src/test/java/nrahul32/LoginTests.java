@@ -1,6 +1,6 @@
 package nrahul32;
 
-import org.openqa.selenium.By;
+import nrahul32.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,16 +13,13 @@ public class LoginTests extends TestBase {
     @Test
     public void LoginTest() {
 
-        driver.get("https://www.flipkart.com/");
+        HomePage flipkart = new HomePage(driver);
 
-        // Commenting as the div opens automatically
-        // driver.findElement(By.xpath("//a[text()='Login']")).click();
-
-        driver.findElement(By.xpath("//span[contains(text(), 'Enter Email/Mobile number')]/../../input")).sendKeys("asd");
-        driver.findElement(By.xpath("//span[contains(text(), 'Enter Password')]/../../input")).sendKeys("asasd");
-        driver.findElement(By.xpath("//span[contains(text(), 'Login')]/../../button")).click();
-        Assert.assertTrue(driver.findElement(By.xpath("//span[text() = 'Please enter valid Email ID/Mobile number']")).isDisplayed());
-
+        flipkart.load();
+        flipkart.enterUsername("asd");
+        flipkart.enterPassword("asdasd");
+        flipkart.clickLoginButton();
+        Assert.assertTrue(flipkart.IsUsernameErrorDisplayed());
     }
 
 }

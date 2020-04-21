@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
 
-    protected WebDriver driver;
+    public WebDriver driver;
 
     @BeforeSuite
     public void setup(){
