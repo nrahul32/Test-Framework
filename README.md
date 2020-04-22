@@ -12,3 +12,5 @@ Progress:
 4.Moved the setup and clean up methods to a TestBase class
 
 5.Refactored to use POM pattern, created and used HomePage class
+
+6.Refactored page class using FindBy annotation, created a test class specific setup method.

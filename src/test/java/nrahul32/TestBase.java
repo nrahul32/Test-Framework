@@ -11,7 +11,7 @@ public class TestBase {
     public WebDriver driver;
 
     @BeforeSuite
-    public void setup(){
+    public void commonSetup(){
         WebDriverManager.chromedriver().version("80.0.3987").setup();
         driver = new ChromeDriver();
     }
